@@ -1,0 +1,36 @@
+.header {
+	display: flex;
+	flex-direction: column;
+	-webkit-box-shadow: 0 5px 20px 0 rgba(0, 0, 0, 0.29);
+	-moz-box-shadow: 0 5px 20px 0 rgba(0, 0, 0, 0.29);
+	box-shadow: 0 5px 20px 0 rgba(0, 0, 0, 0.29);
+	padding: 0 15px;
+
+	> div {
+		padding: 16px 0;
+	}
+
+	.header__logo {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+
+		@media (max-width: 973px) {
+			> button {
+				width: 155px;
+				height: 38px;
+				padding: 7px 12px;
+				font-size: 12px;
+			}
+		}
+
+		@media (max-width: 800px) {
+			justify-content: space-between;
+
+			> div:not(.header__logo):not(.burger),
+			> button {
+				display: none;
+			}
+		}
+	}
+}

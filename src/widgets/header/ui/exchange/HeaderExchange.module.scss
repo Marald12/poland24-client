@@ -1,0 +1,31 @@
+.header_exchange_rate {
+	div {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+
+		b {
+			font-family: Rubik, sans-serif;
+			font-weight: 700;
+			font-size: 16px;
+			line-height: 19.2px;
+			font-style: normal;
+		}
+
+		span {
+			margin-left: 16px;
+			font-family: Rubik, sans-serif;
+			font-weight: 400;
+			font-size: 16px;
+			line-height: 22.4px;
+			font-style: normal;
+		}
+
+		@media (max-width: 973px) {
+			> b,
+			span {
+				font-size: 14px;
+			}
+		}
+	}
+}

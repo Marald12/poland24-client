@@ -1,0 +1,112 @@
+.pop_up {
+	position: fixed;
+	background: rgba(0, 0, 0, 0.5);
+	left: 0;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	cursor: default;
+	z-index: -1;
+	opacity: 0;
+	transition: 0.3s ease-in-out;
+
+	.pop_up__overlay {
+		position: fixed;
+		right: 0;
+		top: 0;
+		bottom: 0;
+		width: 40%;
+		background: #fff;
+		padding: 15px;
+		-webkit-box-shadow: -3px 0px 33px 0px rgba(0, 0, 0, 0.75);
+		-moz-box-shadow: -3px 0px 33px 0px rgba(0, 0, 0, 0.75);
+		box-shadow: -3px 0px 33px 0px rgba(0, 0, 0, 0.75);
+		transform: translateX(1000px);
+		transition: transform 0.4s ease-in-out;
+
+		.pop_up__close {
+			position: absolute;
+			right: 15px;
+			top: 15px;
+			cursor: pointer;
+		}
+
+		@media (max-width: 680px) {
+			.pop_up__close {
+				right: 5px;
+				top: 5px;
+			}
+		}
+
+		.pop_up__container {
+			> *:not(:first-child) {
+				margin-top: 30px;
+			}
+
+			.exchange {
+				> div > div {
+					display: block;
+
+					> b,
+					span {
+						font-size: 16px;
+					}
+				}
+			}
+
+			.auth {
+				> * {
+					font-size: 16px;
+				}
+			}
+
+			> ul {
+				> li:not(:first-child) {
+					margin-top: 20px;
+				}
+
+				> li > a {
+					font-size: 16px;
+				}
+			}
+
+			@media (max-width: 680px) {
+				.exchange {
+					> div > div {
+						> b,
+						span {
+							font-size: 14px;
+						}
+					}
+				}
+
+				.auth {
+					> * {
+						font-size: 14px;
+					}
+				}
+
+				> ul > li {
+					> a {
+						font-size: 14px;
+					}
+
+					> button {
+						justify-content: center;
+						flex-wrap: wrap;
+						white-space: wrap;
+					}
+				}
+			}
+		}
+	}
+
+	&.open {
+		z-index: 999;
+		opacity: 1;
+
+		.pop_up__overlay {
+			transform: translateX(0);
+		}
+	}
+}

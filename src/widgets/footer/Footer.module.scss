@@ -1,0 +1,19 @@
+.footer {
+	flex-grow: 0;
+	flex-shrink: 1;
+	flex-basis: 0;
+	padding: 64px 0;
+	background: #1e2122;
+
+	color: #fff;
+	font-family: Rubik, sans-serif;
+	font-weight: 400;
+	font-size: 14px;
+	line-height: 16.8px;
+	font-style: normal;
+
+	.footer__container {
+		display: flex;
+		justify-content: space-between;
+	}
+}
