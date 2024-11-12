@@ -1,7 +1,7 @@
 import { FC } from 'react'
 import styles from './LogoWhite.module.scss'
 import Image from 'next/image'
-import logo from '@/assets/images/logo.svg'
+import logo from '@/assets/images/logoWhite.svg'
 import Link from 'next/link'
 
 const LogoWhite: FC = () => {

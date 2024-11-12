@@ -2,12 +2,12 @@
 	flex-grow: 0;
 	flex-shrink: 1;
 	flex-basis: 0;
-	padding: 64px 0;
+	padding: 64px 15px;
 	background: #1e2122;
 
 	color: #fff;
 	font-family: Rubik, sans-serif;
-	font-weight: 400;
+	font-weight: 500;
 	font-size: 14px;
 	line-height: 16.8px;
 	font-style: normal;
@@ -15,5 +15,80 @@
 	.footer__container {
 		display: flex;
 		justify-content: space-between;
+		flex-wrap: wrap;
+
+		h5 {
+			font-weight: 700;
+			font-size: 16px;
+			line-height: 19.2px;
+		}
+
+		.logo__copyright {
+			max-width: 257px;
+			margin-top: 32px;
+			color: #bbbcbc;
+		}
+
+		.column__nav {
+			display: flex;
+			flex-direction: column;
+
+			> a {
+				color: #fff;
+				font-size: 15px;
+
+				&:not(:first-child) {
+					margin-top: 10px;
+				}
+			}
+		}
+
+		.column__nav_two {
+			display: flex;
+			justify-content: end;
+			flex-direction: column;
+
+			> a {
+				color: #fff;
+
+				&:not(:first-child) {
+					margin-top: 10px;
+				}
+			}
+		}
+
+		.column__social > div {
+			display: flex;
+
+			> a:not(:first-child) {
+				margin-left: 8px;
+			}
+		}
+
+		.column__contacts {
+			> div {
+				display: flex;
+				align-items: center;
+
+				> span,
+				b {
+					color: #bbbcbc;
+					font-size: 16px;
+					margin-left: 8px;
+				}
+
+				> b {
+					font-weight: 700;
+				}
+
+				.column__contacts_email {
+					color: #9d7b6d;
+				}
+
+				&:not(:first-child) {
+					margin-top: 8px;
+				}
+			}
+		}
 	}
 }
