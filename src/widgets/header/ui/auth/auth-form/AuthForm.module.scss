@@ -1,0 +1,13 @@
+.form {
+	display: flex;
+	flex-direction: column;
+	margin-top: 24px;
+
+	> input:not(:first-child) {
+		margin-top: 16px;
+	}
+
+	> div {
+		margin-top: 24px;
+	}
+}

@@ -1,0 +1,22 @@
+.sum {
+	display: flex;
+	align-items: center;
+
+	> span {
+		font-family: Rubik, sans-serif;
+		font-weight: 500;
+		font-size: 14px;
+		line-height: 14px;
+	}
+
+	> h3 {
+		font-family: Rubik, sans-serif;
+		font-weight: 700;
+		font-size: 24px;
+		line-height: 28.8px;
+	}
+
+	> *:not(:first-child) {
+		margin-left: 16px;
+	}
+}

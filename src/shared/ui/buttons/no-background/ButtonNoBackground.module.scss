@@ -1,0 +1,26 @@
+.button {
+	padding: 14px 24px;
+	color: #2d2d2d;
+	background: none;
+	border: 2px solid #95a4aa;
+	border-radius: 10px;
+	cursor: pointer;
+	font-family: Rubik, sans-serif;
+	font-weight: 700;
+	font-size: 20px;
+	line-height: 24px;
+	font-style: normal;
+	transition: 0.2s ease-in;
+	white-space: nowrap;
+
+	&:hover {
+		background: #bb0a0a;
+		border: 2px solid #bb0a0a;
+		color: #fff;
+	}
+
+	&:disabled {
+		color: #eaedee;
+		border: 1px solid #eaedee;
+	}
+}

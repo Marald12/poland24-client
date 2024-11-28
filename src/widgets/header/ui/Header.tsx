@@ -1,13 +1,13 @@
 import { FC } from 'react'
 import styles from './Header.module.scss'
-import Logo from '@/shared/ui/logo/Logo'
+import Logo from '@/shared/ui/components/logo/Logo'
 import PlaceOrderButton from '@/shared/ui/buttons/place-order/PlaceOrderButton'
-import HeaderAuth from '@/widgets/header/ui/auth/HeaderAuth'
 import HeaderSocial from '@/widgets/header/ui/social/HeaderSocial'
 import HeaderExchange from '@/widgets/header/ui/exchange/HeaderExchange'
 import cn from 'classnames'
 import Burger from '@/features/burger/Burger'
 import HeaderNav from '@/widgets/header/ui/nav/HeaderNav'
+import HeaderProfile from '@/widgets/header/ui/profile/HeaderProfile'
 
 const Header: FC = () => {
 	return (
@@ -18,7 +18,7 @@ const Header: FC = () => {
 					<HeaderSocial />
 					<HeaderExchange />
 					<PlaceOrderButton />
-					<HeaderAuth />
+					<HeaderProfile />
 					<Burger classname={styles.burger} />
 				</div>
 				<HeaderNav />

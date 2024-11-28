@@ -5,7 +5,8 @@ import { AppStore, store } from '@/features/redux/store'
 import { PersistGate } from 'redux-persist/integration/react'
 import { persistStore } from 'redux-persist'
 import { Persistor } from 'redux-persist/es/types'
-import ReduxToastr from 'react-redux-toastr'
+import 'react-toastify/dist/ReactToastify.css'
+import { ToastContainer } from 'react-toastify'
 
 export default function StoreProvider({
 	children
@@ -25,7 +26,7 @@ export default function StoreProvider({
 			<PersistGate loading={null} persistor={persistorRef.current}>
 				{children}
 			</PersistGate>
-			<ReduxToastr position='bottom-right' />
+			<ToastContainer position='bottom-right' />
 		</Provider>
 	)
 }

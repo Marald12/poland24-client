@@ -1,7 +1,7 @@
 import { FC } from 'react'
 import styles from './Footer.module.scss'
 import cn from 'classnames'
-import LogoWhite from '@/shared/ui/logo-white/LogoWhite'
+import LogoWhite from '@/shared/ui/components/logo-white/LogoWhite'
 import Link from 'next/link'
 import viberLogo from '@/assets/images/viber.svg'
 import telegramLogo from '@/assets/images/telegram.svg'

@@ -1,0 +1,44 @@
+.avatar {
+	width: 44px;
+	height: 43px;
+	padding: 7px 10px;
+	background: #9b51e0;
+	border-radius: 50%;
+	position: relative;
+	border: 2px solid #fff;
+
+	> span {
+		font-family: Rubik, sans-serif;
+		font-weight: 600;
+		font-size: 14px;
+		line-height: 14px;
+		color: #fff;
+
+		&:last-child {
+			margin-left: 1px;
+		}
+	}
+
+	&::before {
+		content: '';
+		background: linear-gradient(#fd6e6a, #ffc600);
+		width: 50px;
+		height: 50px;
+		position: absolute;
+		border-radius: 50%;
+		z-index: -1;
+		left: -5px;
+		top: -5.5px;
+	}
+
+	&::after {
+		content: '';
+		width: 15px;
+		height: 15px;
+		background: #00ba88;
+		border-radius: 50%;
+		border: 2px solid #fff;
+		position: absolute;
+		top: -5px;
+	}
+}

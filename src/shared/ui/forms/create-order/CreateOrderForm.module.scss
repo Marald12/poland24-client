@@ -1,0 +1,161 @@
+.form {
+	> div > h5 {
+		font-family: Rubik, sans-serif;
+		font-weight: 700;
+		font-size: 16px;
+		line-height: 19.2px;
+		border-bottom: 1px solid #828282;
+		padding-bottom: 8px;
+	}
+
+	.form__order {
+		> *:not(:first-child) {
+			margin-top: 8px;
+		}
+
+		.column__product_one {
+			display: flex;
+
+			> div {
+				margin-left: 8px;
+
+				> label {
+					font-family: Rubik, sans-serif;
+					font-weight: 700;
+					font-size: 16px;
+					line-height: 19.2px;
+				}
+			}
+
+			.product__one_url {
+				flex: 60%;
+			}
+
+			.product__one_count {
+				flex: 10%;
+			}
+
+			.product__one_price {
+				flex: 15%;
+			}
+
+			.product__one_delivery_price {
+				flex: 15%;
+			}
+		}
+
+		@media (max-width: 1000px) {
+			.column__product_one {
+				flex-wrap: wrap;
+			}
+		}
+
+		.column__two {
+			display: flex;
+			align-items: center;
+			margin-top: 8px;
+
+			.comment__product {
+				flex: 70%;
+			}
+
+			.delivery_type {
+				margin-left: 16px;
+				flex: 30%;
+				margin-top: 8px;
+
+				.type__mail {
+					display: flex;
+					font-family: Rubik, sans-serif;
+					font-weight: 500;
+					font-size: 14px;
+					line-height: 14px;
+
+					> h4 {
+						font-weight: 700;
+					}
+				}
+
+				.feedback {
+					> span {
+						font-family: Rubik, sans-serif;
+						font-weight: 600;
+						font-size: 14px;
+						line-height: 14px;
+					}
+
+					> div {
+						display: flex;
+						justify-content: space-evenly;
+					}
+				}
+			}
+		}
+
+		@media (max-width: 630px) {
+			.column__two {
+				flex-wrap: wrap;
+			}
+		}
+
+		.column__price {
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			flex-wrap: wrap;
+		}
+	}
+
+	.form__info {
+		.column__inputs {
+			display: flex;
+
+			> div {
+				margin-left: 8px;
+				margin-top: 8px;
+			}
+		}
+
+		@media (max-width: 1000px) {
+			.column__inputs {
+				flex-wrap: wrap;
+			}
+		}
+
+		.column__copyright {
+			margin-top: 8px;
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+
+			.textarea {
+				flex: 50%;
+
+				> textarea {
+					min-height: 166px;
+				}
+			}
+
+			.column__copyright_list {
+				display: flex;
+				flex-direction: column;
+				margin-left: 8px;
+				flex: 50%;
+				margin-top: 8px;
+			}
+		}
+
+		@media (max-width: 700px) {
+			.column__copyright {
+				flex-wrap: wrap;
+			}
+		}
+	}
+
+	.submit__button {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		margin-top: 16px;
+	}
+}

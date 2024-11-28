@@ -1,0 +1,10 @@
+.wrapper {
+	display: flex;
+	justify-content: center;
+	list-style-type: none;
+	flex-wrap: wrap;
+
+	> li:not(:first-child) {
+		margin-left: 4px;
+	}
+}

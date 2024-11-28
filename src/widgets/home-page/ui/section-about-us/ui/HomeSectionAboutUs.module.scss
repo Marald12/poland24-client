@@ -1,0 +1,27 @@
+.wrapper {
+	margin-top: 64px;
+	padding: 0 15px;
+	display: flex;
+	justify-content: space-between;
+
+	.column__info {
+		.description {
+			font-family: Rubik, sans-serif;
+			font-weight: 400;
+			font-size: 24px;
+			line-height: 33.6px;
+			max-width: 587px;
+			margin-top: 64px;
+			color: #2d2d2de5;
+			opacity: 0.9;
+		}
+
+		.button {
+			margin-top: 64px;
+		}
+	}
+
+	.column__video > iframe {
+		height: 100%;
+	}
+}

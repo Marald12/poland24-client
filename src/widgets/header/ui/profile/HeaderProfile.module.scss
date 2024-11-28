@@ -1,0 +1,19 @@
+.profile {
+	display: flex;
+	align-items: center;
+	cursor: pointer;
+	position: relative;
+
+	.profile__name {
+		display: flex;
+		flex-direction: column;
+		margin-left: 12px;
+
+		> span {
+			font-family: Rubik, sans-serif;
+			font-weight: 600;
+			font-size: 14px;
+			line-height: 14px;
+		}
+	}
+}

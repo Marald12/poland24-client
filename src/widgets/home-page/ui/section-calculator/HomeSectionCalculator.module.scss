@@ -1,0 +1,48 @@
+.wrapper {
+	padding: 48px 48px 48px 138px;
+	margin-top: 64px;
+	background: #ea0c0c;
+	border-radius: 16px;
+	position: relative;
+	display: flex;
+	justify-content: space-between;
+	color: #fff;
+
+	.calculator {
+		position: absolute;
+		bottom: 10px;
+		left: -150px;
+	}
+
+	.column__info {
+		width: 50%;
+
+		> h1 {
+			font-family: Rubik, sans-serif;
+			font-weight: 800;
+			font-size: 40px;
+			line-height: 48px;
+			max-width: 520px;
+		}
+
+		> ul {
+			max-width: 504px;
+			padding: 0 0 0 20px;
+
+			> li {
+				font-family: Rubik, sans-serif;
+				font-weight: 400;
+				font-size: 16px;
+				line-height: 22.4px;
+
+				&:not(:first-child) {
+					margin-top: 4px;
+				}
+			}
+		}
+	}
+
+	.column__form {
+		width: 50%;
+	}
+}
