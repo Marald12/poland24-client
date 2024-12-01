@@ -8,7 +8,7 @@ import PlaceOrderButton from '@/shared/ui/buttons/place-order/PlaceOrderButton'
 const SectionListWork: FC = () => {
 	return (
 		<section className={cn(styles.wrapper, 'container')}>
-			<SectionTitle title='Как это работает?' />
+			<SectionTitle title='Как это работает' />
 			<HomeSectionListWorkCardList />
 			<div className={styles.button}>
 				<PlaceOrderButton />

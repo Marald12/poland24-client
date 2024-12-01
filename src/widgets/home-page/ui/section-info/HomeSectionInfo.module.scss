@@ -1,10 +1,11 @@
 .wrapper {
-	padding: 0 15px;
 	display: flex;
 	justify-content: space-between;
+	position: relative;
 
 	.column__title {
 		margin-top: 124px;
+		padding: 0 15px;
 
 		> h5 {
 			max-width: 574px;
@@ -34,8 +35,9 @@
 			align-items: start;
 			border-radius: 20px 0 0 50%;
 			position: absolute;
-			right: 0;
-			height: 78%;
+			top: 0;
+			bottom: 0;
+			right: -300px;
 
 			> p {
 				font-family: Rubik, sans-serif;
@@ -77,9 +79,58 @@
 		}
 	}
 
+	.mobile__column_info {
+		display: none;
+		flex-wrap: wrap;
+		margin-top: 32px;
+
+		> div {
+			background-size: cover;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			padding: 10px;
+		}
+
+		.clock {
+			width: 50%;
+			background: #ee3d3d;
+		}
+
+		.car {
+			width: 50%;
+			background: #bb0a0a;
+		}
+
+		.money_one {
+			width: 33.3%;
+			background: #ea0d0d;
+		}
+
+		.money_two {
+			width: 33.3%;
+			background: #bb0a0a;
+		}
+
+		.list {
+			width: 33.3%;
+			background: #ea0d0d;
+		}
+	}
+
 	@media (max-width: 1085px) {
+		flex-direction: column;
+
 		.column__info {
 			display: none;
+		}
+
+		.mobile__column_info {
+			display: flex;
+		}
+
+		.column__title {
+			margin-top: 16px;
 		}
 	}
 }

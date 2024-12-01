@@ -3,7 +3,6 @@ import { FC, useState } from 'react'
 import styles from './BurgerPopUp.module.scss'
 import { IBurgerPopUpInterface } from '@/features/burger/pop-up/burgerPopUp.interface'
 import cn from 'classnames'
-import PlaceOrderButton from '@/shared/ui/buttons/place-order/PlaceOrderButton'
 import { IoMdClose } from 'react-icons/io'
 import Nav from '@/shared/ui/components/nav/Nav'
 import AuthForm from '@/widgets/header/ui/auth/auth-form/AuthForm'
@@ -39,7 +38,6 @@ const BurgerPopUp: FC<IBurgerPopUpInterface> = ({ isOpen, setIsOpen }) => {
 							</span>
 						</div>
 						<Nav />
-						<PlaceOrderButton />
 					</div>
 				</div>
 			</div>

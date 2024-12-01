@@ -5,6 +5,7 @@ import UrlProduct from '@/widgets/home-page/ui/section-info/ui/url-product/UrlPr
 import Image from 'next/image'
 import carImg from '@/assets/images/car.png'
 import clockImg from '@/assets/images/clock.png'
+import mobileClockImg from '@/assets/images/mobile-clock.png'
 import moneyOneImg from '@/assets/images/money_1.png'
 import moneyTwoImg from '@/assets/images/money_2.png'
 import listImg from '@/assets/images/list.png'
@@ -56,6 +57,23 @@ const HomeSectionInfo: FC = () => {
 						средствами
 					</p>
 					<Image src={clockImg} alt='clock' />
+				</div>
+			</div>
+			<div className={styles.mobile__column_info}>
+				<div className={styles.clock}>
+					<Image src={mobileClockImg} alt='mobile clock' width={180} />
+				</div>
+				<div className={styles.car}>
+					<Image src={carImg} alt='mobile car' width={180} />
+				</div>
+				<div className={styles.money_one}>
+					<Image src={moneyOneImg} alt='mobile money one' width={120} />
+				</div>
+				<div className={styles.money_two}>
+					<Image src={moneyTwoImg} alt='mobile money two' width={120} />
+				</div>
+				<div className={styles.list}>
+					<Image src={listImg} alt='mobile list' width={120} />
 				</div>
 			</div>
 		</section>

@@ -1,3 +1,70 @@
 .wrapper {
 	margin-top: 68px;
+	position: relative;
+
+	.container {
+		display: flex;
+		justify-content: space-between;
+
+		.list {
+			display: flex;
+			justify-content: space-between;
+			margin-top: 94px;
+
+			> ul {
+				list-style-type: none;
+
+				> li {
+					display: flex;
+					align-items: center;
+
+					&:not(:first-child) {
+						margin-top: 26.6px;
+					}
+
+					&.active {
+						.bold,
+						.regular {
+							color: #ea0c0c;
+						}
+					}
+
+					.bold {
+						font-family: Rubik, sans-serif;
+						font-weight: 700;
+						font-size: 24px;
+						line-height: 28.8px;
+					}
+
+					.regular {
+						font-family: Rubik, sans-serif;
+						font-weight: 400;
+						font-size: 24px;
+						line-height: 33.6px;
+						margin-left: 16px;
+					}
+
+					@media (max-width: 618px) {
+						.bold {
+							font-size: 14px;
+							line-height: 20px;
+						}
+
+						.regular {
+							font-size: 14px;
+							line-height: 19.6px;
+							margin-left: 8px;
+						}
+					}
+				}
+			}
+		}
+	}
+
+	.map > img {
+		position: absolute;
+		right: 0;
+		top: 0;
+		z-index: -1;
+	}
 }

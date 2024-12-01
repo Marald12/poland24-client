@@ -40,9 +40,43 @@
 				}
 			}
 		}
+
+		@media (max-width: 600px) {
+			> h1 {
+				font-weight: 700;
+				font-size: 24px;
+				line-height: 28.8px;
+			}
+		}
 	}
 
 	.column__form {
 		width: 50%;
+	}
+
+	@media (max-width: 874px) {
+		flex-direction: column;
+		padding: 24px 16px;
+		margin: 0 15px;
+
+		.calculator {
+			display: none;
+		}
+
+		.column__info {
+			width: 100%;
+
+			> h1 {
+				max-width: 100%;
+			}
+
+			> ul {
+				max-width: 100%;
+			}
+		}
+
+		.column__form {
+			width: 100%;
+		}
 	}
 }

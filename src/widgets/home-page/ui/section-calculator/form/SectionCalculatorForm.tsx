@@ -83,6 +83,20 @@ const SectionCalculatorForm: FC = () => {
 
 	return (
 		<form className={styles.form} onSubmit={handleSubmit(submitHandler)}>
+			<div className={styles.mobile__ggg}>
+				<span
+					className={cn(currency == 'zł' && styles.active)}
+					onClick={() => setCurrency('zł')}
+				>
+					zł
+				</span>
+				<span
+					className={cn(currency == '€' && styles.active)}
+					onClick={() => setCurrency('€')}
+				>
+					€
+				</span>
+			</div>
 			<div className={styles.hhh}>
 				<Input
 					type='number'
@@ -121,12 +135,20 @@ const SectionCalculatorForm: FC = () => {
 					<h3>Сумма, ₴</h3>
 					<h2>{sumUAH()}</h2>
 				</div>
-				<CheckBoxWhite
-					className={styles.checkbox}
-					title='На товар (новый или б/у) не выставляется фактура VAT (добавляется 15% комиссия)'
-					{...register('isUsed')}
-				/>
+				<div className={styles.mobile__price}>
+					<h3>zł</h3>
+					<h2>{sumZL()}</h2>
+				</div>
+				<div className={styles.mobile__price}>
+					<h3>₴</h3>
+					<h2>{sumUAH()}</h2>
+				</div>
 			</div>
+			<CheckBoxWhite
+				className={styles.checkbox}
+				title='На товар (новый или б/у) не выставляется фактура VAT (добавляется 15% комиссия)'
+				{...register('isUsed')}
+			/>
 		</form>
 	)
 }

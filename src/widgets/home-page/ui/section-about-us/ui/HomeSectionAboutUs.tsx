@@ -23,7 +23,6 @@ const HomeSectionAboutUs: FC = () => {
 			</div>
 			<div className={styles.column__video}>
 				<iframe
-					width='560'
 					src='https://www.youtube.com/embed/1db8YieAJcs?si=bFBpEwQYWriA7bng'
 					title='YouTube video player'
 					frameBorder='0'

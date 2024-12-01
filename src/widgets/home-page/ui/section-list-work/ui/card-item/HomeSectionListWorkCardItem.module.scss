@@ -6,6 +6,7 @@
 	padding: 24px 16px;
 	border-radius: 8px;
 	margin-top: 64px;
+	background: #fff;
 
 	.header {
 		position: relative;
@@ -35,5 +36,12 @@
 		font-weight: 400;
 		font-size: 16px;
 		line-height: 22.4px;
+	}
+}
+
+@media (max-width: 664px) {
+	.wrapper {
+		max-width: 100%;
+		margin-top: 8px;
 	}
 }
