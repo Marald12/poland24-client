@@ -19,5 +19,13 @@ export const baseApi = createApi({
 			query: () => '/get-profile'
 		})
 	}),
-	tagTypes: ['order', 'shop', 'user']
+	tagTypes: [
+		'order',
+		'shop',
+		'user',
+		'request',
+		'review',
+		'category',
+		'country'
+	]
 })

@@ -7,6 +7,14 @@ import {
 
 export const orderApi = baseApi.injectEndpoints({
 	endpoints: build => ({
+		getAll: build.query<IOrder, null>({
+			query: () => '/orders',
+			providesTags: ['order']
+		}),
+		getOne: build.query<IOrder, string>({
+			query: id => `/orders/${id}`,
+			providesTags: (result, error, arg) => [{ type: 'order', id: arg }]
+		}),
 		createOrderForNoAuth: build.mutation<IOrder, IOrderDto>({
 			query: body => ({
 				url: '/orders/for-no-auth',
@@ -21,7 +29,7 @@ export const orderApi = baseApi.injectEndpoints({
 				method: 'POST',
 				body
 			}),
-			invalidatesTags: [{ type: 'order' }]
+			invalidatesTags: [{ type: 'order' }, 'user']
 		})
 	})
 })

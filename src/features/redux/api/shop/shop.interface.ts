@@ -1,4 +1,5 @@
 import { IBase } from '@/features/redux/api/base.interface'
+import { ICategory } from '@/features/redux/api/category/category.interface'
 
 export interface IShop extends IBase {
 	title: string
@@ -8,5 +9,5 @@ export interface IShop extends IBase {
 	logoPath: string
 	bannerPath: string
 	countries: any[]
-	categories: any[]
+	categories: ICategory[]
 }
