@@ -11,6 +11,7 @@ import { IPlaceOrderButtonProps } from '@/shared/ui/buttons/place-order/place-or
 const PlaceOrderButton: FC<IPlaceOrderButtonProps> = ({
 	className,
 	url,
+	children,
 	...rest
 }) => {
 	const [isOpen, setIsOpen] = useState(false)
@@ -23,7 +24,7 @@ const PlaceOrderButton: FC<IPlaceOrderButtonProps> = ({
 				onClick={() => setIsOpen(prevState => !prevState)}
 				{...rest}
 			>
-				Оформить заказ
+				{children ? children : 'Оформить заказ'}
 			</button>
 			<PopUp header='Сделать заказ' isOpen={isOpen} setIsOpen={setIsOpen}>
 				{isAuth ? (

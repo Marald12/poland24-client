@@ -11,9 +11,8 @@ import {
 	IRegisterForm,
 	IRegisterFormProps
 } from '@/widgets/header/ui/auth/register-form/register-form.interface'
-import { toast } from 'react-toastify'
 
-const RegisterForm: FC<IRegisterFormProps> = ({ setIsOpen, isOpen }) => {
+const RegisterForm: FC<IRegisterFormProps> = ({ setIsOpen }) => {
 	const { register, handleSubmit, formState } = useForm<IRegisterForm>({
 		mode: 'onChange'
 	})
@@ -22,8 +21,6 @@ const RegisterForm: FC<IRegisterFormProps> = ({ setIsOpen, isOpen }) => {
 
 	const submitHandler = async (data: IRegisterForm) => {
 		const nameAndSurname = data.name.split(' ')
-		if (data.password !== data.repeatPassword)
-			return toast.error('Пароли не совпадают')
 
 		const response = await dispatch(
 			authRegister({
@@ -88,6 +85,18 @@ const RegisterForm: FC<IRegisterFormProps> = ({ setIsOpen, isOpen }) => {
 					required: {
 						value: true,
 						message: 'Поле пароль пустое'
+					},
+					minLength: {
+						value: 8,
+						message: 'Миниммум 8 символов'
+					},
+					maxLength: {
+						value: 32,
+						message: 'Максимум 32 символа'
+					},
+					validate: (value, formValues) => {
+						if (value !== formValues.repeatPassword)
+							return 'Пароли не совпадают'
 					}
 				})}
 			/>
@@ -99,6 +108,17 @@ const RegisterForm: FC<IRegisterFormProps> = ({ setIsOpen, isOpen }) => {
 					required: {
 						value: true,
 						message: 'Поле пароль пустое'
+					},
+					minLength: {
+						value: 8,
+						message: 'Миниммум 8 символов'
+					},
+					maxLength: {
+						value: 32,
+						message: 'Максимум 32 символа'
+					},
+					validate: (value, formValues) => {
+						if (value !== formValues.password) return 'Пароли не совпадают'
 					}
 				})}
 			/>

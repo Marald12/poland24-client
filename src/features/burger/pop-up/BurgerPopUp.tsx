@@ -56,7 +56,7 @@ const BurgerPopUp: FC<IBurgerPopUpInterface> = ({ isOpen, setIsOpen }) => {
 						Зарегистрируйтесь
 					</LinkUnderline>
 				</div>
-				<AuthForm isOpen={isOpenAuthPopUp} setIsOpen={setIsOpenAuthPopUp} />
+				<AuthForm setIsOpen={setIsOpenAuthPopUp} />
 			</PopUp>
 			<PopUp
 				header='Регистрация'
@@ -72,10 +72,7 @@ const BurgerPopUp: FC<IBurgerPopUpInterface> = ({ isOpen, setIsOpen }) => {
 					>
 						Войдите
 					</LinkUnderline>
-					<RegisterForm
-						isOpen={isOpenRegisterPopUp}
-						setIsOpen={setIsOpenRegisterPopUp}
-					/>
+					<RegisterForm setIsOpen={setIsOpenRegisterPopUp} />
 				</div>
 			</PopUp>
 		</>

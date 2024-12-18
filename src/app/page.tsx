@@ -6,17 +6,17 @@ import HomeSectionCalculator from '@/widgets/home-page/ui/section-calculator/Hom
 import HomeSectionMap from '@/widgets/home-page/ui/section-map/HomeSectionMap'
 import HomeSectionShops from '@/widgets/home-page/ui/section-shops/HomeSectionShops'
 
-const Page: NextPage = () => {
+const homePage: NextPage = () => {
 	return (
-		<div>
+		<>
 			<HomeSectionInfo />
 			<HomeSectionListWork />
 			<HomeSectionAboutUs />
 			<HomeSectionCalculator />
 			<HomeSectionMap />
 			<HomeSectionShops />
-		</div>
+		</>
 	)
 }
 
-export default Page
+export default homePage

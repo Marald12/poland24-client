@@ -6,15 +6,18 @@ import {
 
 export const reviewApi = baseApi.injectEndpoints({
 	endpoints: build => ({
-		getAll: build.query<IReview[], null>({
-			query: () => '/reviews',
+		getAllReviews: build.query<IReview[], string>({
+			query: shop => ({
+				url: '/reviews',
+				params: { shop }
+			}),
 			providesTags: ['review']
 		}),
-		getOne: build.query<IReview, string>({
+		getOneReview: build.query<IReview, string>({
 			query: id => `/reviews/${id}`,
 			providesTags: (result, error, arg) => [{ type: 'review', id: arg }]
 		}),
-		create: build.mutation<IReview, IReviewDto>({
+		createReview: build.mutation<IReview, IReviewDto>({
 			query: body => ({
 				url: '/reviews',
 				method: 'POST',

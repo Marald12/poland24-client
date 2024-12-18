@@ -1,0 +1,29 @@
+.wrapper {
+	display: flex;
+	margin-top: 24px;
+	height: 100%;
+	padding: 0 15px;
+}
+
+.description {
+	margin-top: 64px;
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+	padding: 0 15px;
+
+	> p {
+		max-width: 613px;
+		font-family: Rubik, sans-serif;
+		font-weight: 400;
+		font-size: 16px;
+		line-height: 22.4px;
+		opacity: 0.9;
+	}
+}
+
+.button {
+	display: flex;
+	justify-content: center;
+	margin-top: 48px;
+}

@@ -1,0 +1,40 @@
+.wrapper {
+	margin-top: 32px;
+	background: #fff;
+	border-radius: 10px;
+	padding: 16px;
+	box-shadow: 0 16px 16px 0 #0000001a;
+
+	> h3 {
+		font-family: Rubik, sans-serif;
+		font-weight: 700;
+		font-size: 16px;
+		line-height: 19.2px;
+		padding-bottom: 8px;
+		border-bottom: 1px solid #828282;
+	}
+
+	.inputs {
+		display: flex;
+		flex-wrap: wrap;
+		align-items: center;
+
+		> div {
+			width: 40%;
+			margin-left: 16px;
+			margin-top: 16px;
+		}
+
+		> button {
+			padding: 8px;
+			width: 40px;
+			height: 40px;
+			margin-left: 16px;
+		}
+	}
+
+	.checkbox {
+		margin-left: 16px;
+		margin-top: 16px;
+	}
+}

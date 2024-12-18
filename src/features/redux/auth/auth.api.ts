@@ -6,6 +6,7 @@ import {
 	IRegisterDto
 } from '@/features/redux/auth/auth.interface'
 import { toast } from 'react-toastify'
+import { isAxiosError } from 'axios'
 
 export const authLogin = createAsyncThunk<IAuth, IAuthDto>(
 	'auth/login',
@@ -16,10 +17,13 @@ export const authLogin = createAsyncThunk<IAuth, IAuthDto>(
 			toast.success('Вы успешно вошли в аккаунт')
 
 			return response.data
-		} catch (e: any) {
-			const message = e.response.data.message
-			toast.error(message)
-			return rejectWithValue(message)
+		} catch (e) {
+			if (isAxiosError(e)) {
+				const message = e.response?.data.message as string | string[]
+				return rejectWithValue(message)
+			} else {
+				rejectWithValue('Error')
+			}
 		}
 	}
 )
@@ -33,10 +37,13 @@ export const authRegister = createAsyncThunk<IAuth, IRegisterDto>(
 			toast.success('Вы успешно создали аккаунт')
 
 			return response.data
-		} catch (e: any) {
-			const message = e.response.data.message
-			message.map((item: string) => toast.error(item))
-			return rejectWithValue(message)
+		} catch (e) {
+			if (isAxiosError(e)) {
+				const message = e.response?.data.message as string | string[]
+				return rejectWithValue(message)
+			} else {
+				rejectWithValue('Error')
+			}
 		}
 	}
 )

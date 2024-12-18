@@ -12,7 +12,7 @@ import { useAppDispatch } from '@/shared/hooks/useAppDispatch'
 import { authLogin } from '@/features/redux/auth/auth.api'
 import { useRouter } from 'next/navigation'
 
-const AuthForm: FC<IAuthFormProps> = ({ setIsOpen, isOpen }) => {
+const AuthForm: FC<IAuthFormProps> = ({ setIsOpen }) => {
 	const { register, handleSubmit, formState } = useForm<IAuthForm>({
 		mode: 'onChange'
 	})

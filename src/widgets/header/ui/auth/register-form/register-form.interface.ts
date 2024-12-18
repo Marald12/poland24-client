@@ -9,6 +9,5 @@ export interface IRegisterForm {
 }
 
 export interface IRegisterFormProps {
-	isOpen: boolean
 	setIsOpen: Dispatch<SetStateAction<boolean>>
 }

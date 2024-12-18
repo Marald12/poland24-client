@@ -13,6 +13,7 @@ export interface IOrder extends IBase {
 	phoneNumber: string
 	email: string
 	comment: string
+	status: 'Выполнен' | 'Комплектуется' | 'Отменен' | 'Не выполнен'
 	shop: string
 	isUsed: boolean
 	summa: number

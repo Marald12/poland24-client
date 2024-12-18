@@ -1,12 +1,14 @@
-import { Middleware, MiddlewareAPI } from 'redux'
+import { Middleware } from 'redux'
 import { isRejectedWithValue } from '@reduxjs/toolkit'
 import { toast } from 'react-toastify'
 
 export const rtkQueryErrorLogger: Middleware =
-	(api: MiddlewareAPI) => next => action => {
+	(/*_api: MiddlewareAPI*/) => next => action => {
 		if (isRejectedWithValue(action)) {
-			//@ts-ignore
-			toast.error(action.payload.data.message)
+			const error = action.payload as string | string[]
+
+			if (Array.isArray(error)) error.map(item => toast.error(item))
+			else toast.error(error)
 		}
 
 		return next(action)

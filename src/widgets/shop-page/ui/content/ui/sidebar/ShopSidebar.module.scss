@@ -1,0 +1,54 @@
+.sidebar {
+	background: #fff;
+	box-shadow: 0 4px 5px -1px #00000014;
+	padding: 16px;
+	border-radius: 8px;
+	min-width: 228px;
+	margin-top: 12px;
+
+	@media (max-width: 800px) {
+		display: none;
+	}
+
+	.option {
+		display: flex;
+		flex-direction: column;
+
+		&:not(:first-child) {
+			margin-top: 11px;
+		}
+
+		.option__header {
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			border-bottom: 1px solid #e0e0e0;
+			padding-bottom: 8px;
+
+			> h4 {
+				font-family: Rubik, sans-serif;
+				font-weight: 700;
+				font-size: 16px;
+				line-height: 19.2px;
+				max-width: 120px;
+			}
+
+			> span > svg {
+				fill: #2d2d2d99;
+				opacity: 0.6;
+			}
+		}
+
+		.sections {
+			margin-top: 8px;
+			transition: 0.3s ease-in-out;
+			display: none;
+			max-height: 268px;
+			overflow-y: scroll;
+
+			&.active {
+				display: block;
+			}
+		}
+	}
+}

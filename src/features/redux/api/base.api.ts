@@ -14,11 +14,7 @@ export const baseApi = createApi({
 		}
 	}),
 	reducerPath: 'api',
-	endpoints: build => ({
-		getProfile: build.query({
-			query: () => '/get-profile'
-		})
-	}),
+	endpoints: build => ({}),
 	tagTypes: [
 		'order',
 		'shop',

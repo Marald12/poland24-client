@@ -9,8 +9,7 @@ import CheckBoxWhite from '@/shared/ui/checkboxs/checkbox-white/CheckBoxWhite'
 import cn from 'classnames'
 
 const SectionCalculatorForm: FC = () => {
-	const { formState, watch, register, handleSubmit } =
-		useForm<ISectionCalculatorForm>()
+	const { watch, register, handleSubmit } = useForm<ISectionCalculatorForm>()
 	const [currency, setCurrency] = useState<'zł' | '€'>('zł')
 
 	const [sum, setSum] = useState(0)

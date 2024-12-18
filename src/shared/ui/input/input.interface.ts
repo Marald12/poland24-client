@@ -6,4 +6,5 @@ export interface IInputProps
 		HTMLInputElement
 	> {
 	error?: string
+	label?: string
 }

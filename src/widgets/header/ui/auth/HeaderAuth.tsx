@@ -37,7 +37,7 @@ const HeaderAuth: FC = () => {
 						Зарегистрируйтесь
 					</LinkUnderline>
 				</div>
-				<AuthForm isOpen={isOpenAuthPopUp} setIsOpen={setIsOpenAuthPopUp} />
+				<AuthForm setIsOpen={setIsOpenAuthPopUp} />
 			</PopUp>
 			<PopUp
 				header='Регистрация'
@@ -54,7 +54,7 @@ const HeaderAuth: FC = () => {
 						Войдите
 					</LinkUnderline>
 				</div>
-				<RegisterForm isOpen={isOpenAuthPopUp} setIsOpen={setIsOpenAuthPopUp} />
+				<RegisterForm setIsOpen={setIsOpenAuthPopUp} />
 			</PopUp>
 		</>
 	)

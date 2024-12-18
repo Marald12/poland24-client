@@ -6,6 +6,5 @@ export interface IAuthForm {
 }
 
 export interface IAuthFormProps {
-	isOpen: boolean
 	setIsOpen: Dispatch<SetStateAction<boolean>>
 }

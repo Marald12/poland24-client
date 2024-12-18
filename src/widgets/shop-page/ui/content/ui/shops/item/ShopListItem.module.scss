@@ -1,0 +1,71 @@
+.item {
+	background: #fff;
+	border-radius: 10px;
+	box-shadow: 0 24px 33px -9px #0000001a;
+	position: relative;
+	overflow-x: hidden;
+	padding: 16px;
+	min-width: 203px;
+	max-height: 191px;
+	color: #0d0d0d;
+
+	.logo {
+		position: relative;
+		display: flex;
+		justify-content: center;
+
+		.logo__spot {
+			width: 58.47px;
+			height: 56px;
+			background: #eaedee;
+			border-radius: 75% 100% 75% 80%;
+		}
+
+		> img {
+			position: absolute;
+			top: 20px;
+			right: 30px;
+			width: 66px;
+			height: 19.74px;
+		}
+	}
+
+	> h3 {
+		font-family: Rubik, sans-serif;
+		font-weight: 700;
+		font-size: 24px;
+		line-height: 28.8px;
+		margin-top: 14px;
+		text-align: center;
+	}
+
+	.container__blocks {
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+
+		.block {
+			display: flex;
+			margin-top: 9px;
+			flex-direction: column;
+
+			> h4 {
+				margin-left: 0;
+			}
+
+			.block__title {
+				font-family: Rubik, sans-serif;
+				font-weight: 400;
+				font-size: 14px;
+				line-height: 16.8px;
+			}
+
+			> h4 {
+				font-family: Rubik, sans-serif;
+				font-weight: 700;
+				font-size: 16px;
+				line-height: 19.2px;
+			}
+		}
+	}
+}

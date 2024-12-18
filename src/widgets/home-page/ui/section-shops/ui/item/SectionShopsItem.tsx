@@ -18,7 +18,7 @@ const SectionShopsItem: FC<ISectionShopsItemProps> = ({ shop }) => {
 				/>
 			</div>
 			<h3>{shop.title}</h3>
-			<p>{shop.description}</p>
+			<p>{shop.description.slice(0, 99)}</p>
 			<div className={styles.container__blocks}>
 				<div className={styles.block}>
 					<span className={styles.block__title}>Сроки доставки:</span>

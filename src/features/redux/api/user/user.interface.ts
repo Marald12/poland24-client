@@ -1,3 +1,6 @@
+import { IOrder } from '@/features/redux/api/order/order.interface'
+import { IReview } from '@/features/redux/api/review/review.interface'
+
 export interface IUser {
 	_id: string
 	email: string
@@ -9,6 +12,14 @@ export interface IUser {
 	updatedAt: string
 	__v: number
 	role: string
-	orders: string[]
-	reviews: string[]
+	orders: IOrder[]
+	reviews: IReview[]
+}
+
+export interface IUserDto {
+	name?: string
+	surname?: string
+	email?: string
+	phoneNumber?: number
+	password?: string
 }

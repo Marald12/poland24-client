@@ -2,7 +2,7 @@ import type { NextConfig } from 'next'
 
 const nextConfig: NextConfig = {
 	images: {
-		domains: ['http://localhost:3002/']
+		remotePatterns: [{ protocol: 'http', hostname: 'localhost', port: '3002' }]
 	},
 	async rewrites() {
 		return [

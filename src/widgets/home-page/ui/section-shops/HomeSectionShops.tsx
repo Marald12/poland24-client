@@ -8,10 +8,11 @@ import { FaArrowLeft, FaArrowRight } from 'react-icons/fa6'
 import { shopApi } from '@/features/redux/api/shop/shop.api'
 import SectionShopsItem from '@/widgets/home-page/ui/section-shops/ui/item/SectionShopsItem'
 import { IoIosArrowBack, IoIosArrowForward } from 'react-icons/io'
+import Link from 'next/link'
 
 const HomeSectionShops: FC = () => {
 	const { data, isLoading } = shopApi.useGetAllShopsQuery(null)
-	const ref = useRef<any>()
+	const ref = useRef<HTMLDivElement>(null)
 	const [count, setCount] = useState(1)
 	const [maxCount, setMaxCount] = useState(0)
 	const [screenWidth, setScreenWidth] = useState(window.innerWidth)
@@ -62,7 +63,9 @@ const HomeSectionShops: FC = () => {
 						</ButtonNoBackground>
 					</div>
 				</div>
-				<ButtonNoBackground>все магазины</ButtonNoBackground>
+				<Link href='shop'>
+					<ButtonNoBackground>все магазины</ButtonNoBackground>
+				</Link>
 			</div>
 			<div className={styles.slider}>
 				<div className={styles.slider__items} ref={ref}>

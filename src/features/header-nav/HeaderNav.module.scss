@@ -1,0 +1,32 @@
+.header {
+	display: flex;
+	align-items: center;
+
+	> a {
+		font-family: Rubik, sans-serif;
+		font-weight: 400;
+		font-size: 16px;
+		line-height: 22.4px;
+		color: #2d2d2d;
+		opacity: 0.9;
+		position: relative;
+
+		&:not(:last-child)::after {
+			position: absolute;
+			content: url('../../assets/images/arrow-right.svg');
+			width: 16px;
+			height: 16px;
+			top: 2px;
+			right: -21px;
+		}
+
+		&:not(:first-child) {
+			margin-left: 25px;
+		}
+
+		&:last-child {
+			font-weight: 700;
+			line-height: 19.2px;
+		}
+	}
+}

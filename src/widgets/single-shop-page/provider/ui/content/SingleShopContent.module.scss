@@ -1,0 +1,178 @@
+.wrapper {
+	display: flex;
+	padding: 0 15px;
+
+	.image {
+		> img {
+			max-width: none;
+			max-height: none;
+			width: 100%;
+			height: auto;
+		}
+
+		.title__mobile {
+			display: none;
+		}
+	}
+
+	.info {
+		margin-left: 64px;
+
+		.description {
+			margin-top: 24px;
+			max-width: 590.29px;
+			font-family: Rubik, sans-serif;
+			font-weight: 700;
+			font-size: 16px;
+			line-height: 19.2px;
+		}
+
+		.order {
+			background: #fff;
+			padding: 8px;
+			border-radius: 16px;
+			display: flex;
+			justify-content: space-between;
+			box-shadow: 0px 12px 19px -5px #00000014;
+			margin-top: 24px;
+
+			> button {
+				margin-left: 8px;
+			}
+		}
+
+		.price {
+			margin-top: 64px;
+
+			> h3 {
+				font-family: Rubik, sans-serif;
+				font-weight: 800;
+				font-size: 24px;
+				line-height: 28.8px;
+				max-width: 520px;
+			}
+
+			.input {
+				display: flex;
+				margin-top: 16px;
+				padding-bottom: 16px;
+				border-bottom: 2px solid #bdbdbd;
+
+				> div > input {
+					background: #fff;
+
+					&::placeholder {
+						color: #2d2d2de5;
+						opacity: 0.9;
+					}
+				}
+
+				> button {
+					margin-left: 8px;
+				}
+			}
+
+			.total__price {
+				display: flex;
+
+				.total__price_column {
+					display: flex;
+					align-items: center;
+
+					> *:not(:first-child) {
+						margin-left: 16px;
+					}
+
+					> h4 {
+						font-family: Rubik, sans-serif;
+						font-weight: 700;
+						font-size: 16px;
+						line-height: 19.2px;
+					}
+
+					> h3 {
+						font-family: Rubik, sans-serif;
+						font-weight: 700;
+						font-size: 24px;
+						line-height: 28.8px;
+					}
+				}
+			}
+
+			.checkbox {
+				margin-top: 16px;
+			}
+		}
+
+		.bottom__description {
+			margin-top: 48px;
+			max-width: 590.29px;
+			font-family: Rubik, sans-serif;
+			font-weight: 400;
+			font-size: 16px;
+			line-height: 22.4px;
+			opacity: 0.9;
+		}
+	}
+
+	.deliveryInfo {
+		display: flex;
+		align-items: center;
+		margin-top: 32px;
+
+		> span {
+			font-family: Rubik, sans-serif;
+			font-weight: 400;
+			font-size: 14px;
+			line-height: 16.8px;
+			opacity: 0.9;
+
+			&:not(:first-child) {
+				margin-left: 32px;
+			}
+		}
+
+		> h4 {
+			font-family: Rubik, sans-serif;
+			font-weight: 700;
+			font-size: 16px;
+			line-height: 19.2px;
+			margin-left: 8px;
+		}
+	}
+
+	@media (max-width: 900px) {
+		flex-wrap: wrap;
+		justify-content: center;
+
+		.info {
+			.title {
+				display: none;
+			}
+		}
+
+		.image {
+			.title__mobile {
+				display: block;
+				margin-bottom: 16px;
+			}
+		}
+	}
+
+	@media (max-width: 528px) {
+		.info {
+			margin-left: 0;
+
+			.price > .input,
+			.order {
+				flex-wrap: wrap;
+
+				> button {
+					width: 100%;
+					margin-left: 0;
+					margin-top: 8px;
+				}
+			}
+		}
+	}
+}
