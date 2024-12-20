@@ -7,23 +7,25 @@ import cn from 'classnames'
 import Button from '@/shared/ui/buttons/button/Button'
 import { FaRegQuestionCircle } from 'react-icons/fa'
 import { FiMinus, FiPlus } from 'react-icons/fi'
+import novaPoshtaImg from '@/assets/images/nova-poshta.png'
+import Image from 'next/image'
+import Link from 'next/link'
 
 const OrderItem: FC<IOrderItemProps> = ({ order }) => {
 	const [isShow, setIsShow] = useState(false)
 	const ref = useRef<HTMLDivElement>(null)
 
+	console.log(order)
+
 	const clickHandler = () =>
 		setIsShow(prevState => {
 			if (ref.current) {
 				if (prevState) {
-					ref.current!.style.transform = 'translateY(-1000px)'
+					ref.current!.style.transform = 'scale(0)'
 					setTimeout(() => (ref.current!.style.display = 'none'), 200)
 				} else {
-					ref.current.style.display = 'block'
-					setTimeout(
-						() => (ref.current!.style.transform = 'translateY(0)'),
-						200
-					)
+					ref.current.style.display = 'flex'
+					setTimeout(() => (ref.current!.style.transform = 'scale(1)'), 1)
 				}
 			}
 
@@ -32,7 +34,7 @@ const OrderItem: FC<IOrderItemProps> = ({ order }) => {
 
 	return (
 		<div className={styles.wrapper}>
-			<div className={styles.item}>
+			<div className={cn(styles.item, isShow && styles.hidden)}>
 				<div
 					className={cn(
 						styles.status,
@@ -47,17 +49,25 @@ const OrderItem: FC<IOrderItemProps> = ({ order }) => {
 					</span>
 					<h4>{order.status}</h4>
 				</div>
-				<div className={styles.description}>
-					<span>{order.description}</span>
-					<p>{order.comment}</p>
-				</div>
+				{!isShow && (
+					<>
+						<div className={styles.description}>
+							<span>{order.description}</span>
+							<p>{order.comment}</p>
+						</div>
+					</>
+				)}
 				<div className={styles.konets}>
-					<div className={styles.summa}>
-						<span>Сумма заказа</span>
-						<h4>{order.summa} грн.</h4>
-					</div>
-					<Button>Оплатить</Button>
-					<FaRegQuestionCircle size={24} />
+					{!isShow && (
+						<>
+							<div className={styles.summa}>
+								<span>Сумма заказа</span>
+								<h4>{order.summa} грн.</h4>
+							</div>
+							<Button>Оплатить</Button>
+							<FaRegQuestionCircle size={24} />
+						</>
+					)}
 					<span onClick={clickHandler}>
 						{!isShow ? (
 							<FiPlus size={18} color='#000' />
@@ -68,7 +78,81 @@ const OrderItem: FC<IOrderItemProps> = ({ order }) => {
 				</div>
 			</div>
 			<div className={styles.info} ref={ref}>
-				{order.comment}
+				<div className={styles.side__info}>
+					<div className={styles.delivery__info}>
+						<h4>Информация о заказе</h4>
+						<div>
+							<span>Перевозчик:</span>
+							<h5>Новая почта</h5>
+						</div>
+						<div>
+							<span>Адрес:</span>
+							<h5>-</h5>
+						</div>
+						<div>
+							<span>Получатель:</span>
+							<h5>
+								{order.user
+									? `${order.user.name} ${order.user.surname}`
+									: `${order.name} ${order.surname}`}
+							</h5>
+						</div>
+						<div>
+							<span>Телефон:</span>
+							<h5>{order.user ? order.user.phoneNumber : order.phoneNumber}</h5>
+						</div>
+						<div>
+							<span>e-mail:</span>
+							<h5>{order.user ? order.user.email : order.email}</h5>
+						</div>
+					</div>
+					<div className={styles.delivery}>
+						<h4>Доставка</h4>
+						<div>
+							<Image
+								src={novaPoshtaImg}
+								alt='nova poshta'
+								width={48}
+								height={48}
+							/>
+							<div>
+								<div>
+									<span>Дата отправки:</span>
+									<h5>{dayjs(order.createdAt).format('DD.MM.YYYY')}</h5>
+								</div>
+								<div>
+									<span>Накладная:</span>
+									<h5>00000000000000</h5>
+								</div>
+								<div>
+									<span>Количество мест:</span>
+									<h5>1</h5>
+								</div>
+								<div className={styles.track}>
+									<Link href=''>Отследить посылку</Link>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div className={styles.order}>
+					<h4>Ваш заказ</h4>
+					<div className={styles.table__header}>
+						<span>{order.description}</span>
+						<h5>Сумма заказа</h5>
+						<h5>К-во</h5>
+						<h5>Сумма</h5>
+					</div>
+					<div className={styles.table__content}>
+						<div>
+							<span>{order.description}</span>
+							<span>{order.comment}</span>
+						</div>
+						<span>{order.summa} грн.</span>
+						<span>{order.count}</span>
+						<span>{order.summa} грн.</span>
+					</div>
+				</div>
 			</div>
 		</div>
 	)

@@ -4,11 +4,18 @@
 	.item {
 		background: #fff;
 		padding: 18px 16px;
-		border-bottom: 1px solid #e0e0e0;
+		border-bottom: 1px solid #000;
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
 		width: 100%;
+		transition: 0.3s ease-in-out;
+
+		&.hidden {
+			background: none;
+			border: none;
+			padding: 18px 0;
+		}
 
 		.status {
 			padding-left: 12px;
@@ -114,7 +121,175 @@
 
 	.info {
 		transition: 0.2s ease-in;
-		transform: translateY(-1000px);
 		display: none;
+		transform: scale(0);
+		margin-left: 16px;
+		margin-bottom: 16px;
+
+		.side__info {
+			flex: 25%;
+
+			.delivery__info > div {
+				display: flex;
+				align-items: center;
+				margin-top: 4px;
+
+				> h4 {
+					font-family: Rubik, sans-serif;
+					font-weight: 700;
+					font-size: 16px;
+					line-height: 19.2px;
+					border-bottom: 1px solid #000;
+					padding-bottom: 4px;
+				}
+
+				> span {
+					font-family: Rubik, sans-serif;
+					font-weight: 400;
+					font-size: 14px;
+					line-height: 16.8px;
+					opacity: 0.6;
+				}
+
+				> h5 {
+					margin: 0;
+					font-family: Rubik, sans-serif;
+					font-weight: 600;
+					font-size: 14px;
+					line-height: 14px;
+					margin-left: 8px;
+				}
+			}
+
+			.delivery {
+				margin-top: 32px;
+
+				> h4 {
+					font-family: Rubik, sans-serif;
+					font-weight: 700;
+					font-size: 16px;
+					line-height: 19.2px;
+					border-bottom: 1px solid #000;
+					padding-bottom: 4px;
+				}
+
+				> div {
+					margin-top: 8px;
+					display: flex;
+
+					> div {
+						margin-left: 16px;
+
+						> div {
+							display: flex;
+							align-items: center;
+
+							&:not(:first-child) {
+								margin-top: 8px;
+							}
+
+							&.track > a {
+								color: #df1638;
+								font-family: Rubik, sans-serif;
+								font-weight: 400;
+								font-size: 14px;
+								line-height: 16.8px;
+								text-decoration: underline dotted;
+								text-underline-offset: 4px;
+							}
+
+							> span {
+								font-family: Rubik, sans-serif;
+								font-weight: 400;
+								font-size: 14px;
+								line-height: 16.8px;
+								opacity: 0.6;
+							}
+
+							> h5 {
+								margin: 0;
+								font-family: Rubik, sans-serif;
+								font-weight: 600;
+								font-size: 14px;
+								line-height: 14px;
+								margin-left: 8px;
+							}
+						}
+					}
+				}
+			}
+		}
+
+		.order {
+			flex: 75%;
+			margin-left: 38px;
+
+			> h4 {
+				font-family: Rubik, sans-serif;
+				font-weight: 700;
+				font-size: 16px;
+				line-height: 19.2px;
+				border-bottom: 1px solid #000;
+				padding-bottom: 4px;
+			}
+
+			.table__header {
+				padding-bottom: 4px;
+				border-bottom: 1px solid #e0e0e0;
+				display: flex;
+				justify-content: space-around;
+				margin-top: 12px;
+
+				> span {
+					opacity: 0;
+				}
+
+				> h5 {
+					margin: 0;
+					font-family: 'SF Pro Display', sans-serif;
+					font-weight: 600;
+					font-size: 14px;
+					line-height: 14px;
+					opacity: 0.9;
+				}
+			}
+
+			.table__content {
+				display: flex;
+				justify-content: space-around;
+
+				> div {
+					display: flex;
+					flex-direction: column;
+
+					> span:nth-child(1) {
+						color: #9d7b6d;
+						text-decoration: underline;
+						text-underline-color: #9d7b6d;
+						text-underline-offset: 3px;
+						font-family: Rubik, sans-serif;
+						font-weight: 400;
+						font-size: 14px;
+						line-height: 16.8px;
+					}
+
+					> span:nth-child(2) {
+						font-family: Rubik, sans-serif;
+						font-weight: 400;
+						font-size: 14px;
+						line-height: 16.8px;
+						opacity: 0.9;
+						margin-top: 4px;
+					}
+				}
+
+				> span {
+					font-family: Rubik, sans-serif;
+					font-weight: 400;
+					font-size: 14px;
+					line-height: 16.8px;
+				}
+			}
+		}
 	}
 }
