@@ -1,126 +1,127 @@
 .wrapper {
-	margin-top: 204.5px;
+  margin-top: 204.5px;
+  overflow: hidden;
 
-	.header {
-		display: flex;
-		justify-content: space-between;
-		padding: 0 15px;
+  .header {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 15px;
 
-		.slider__button {
-			display: flex;
-			align-items: center;
+    .slider__button {
+      display: flex;
+      align-items: center;
 
-			> span {
-				font-family: Rubik, sans-serif;
-				font-weight: 700;
-				font-size: 20px;
-				line-height: 24px;
-				color: #95a4aa;
-				margin: 0 21px;
+      > span {
+        font-family: Rubik, sans-serif;
+        font-weight: 700;
+        font-size: 20px;
+        line-height: 24px;
+        color: #95a4aa;
+        margin: 0 21px;
 
-				> b {
-					color: #000;
-				}
-			}
-		}
-	}
+        > b {
+          color: #000;
+        }
+      }
+    }
+  }
 
-	.slider {
-		position: relative;
+  .slider {
+    position: relative;
 
-		.slider__items {
-			display: flex;
-			margin-top: 64px;
-			transition: transform 0.3s ease-in-out;
+    .slider__items {
+      display: flex;
+      margin-top: 64px;
+      transition: transform 0.3s ease-in-out;
 
-			> div:not(:first-child) {
-				margin-left: 16px;
-			}
-		}
+      > div:not(:first-child) {
+        margin-left: 16px;
+      }
+    }
 
-		.mobile__slider_button {
-			display: none;
+    .mobile__slider_button {
+      display: none;
 
-			.mobile__button_left {
-				position: absolute;
-				left: 15px;
-				top: 50%;
-			}
+      .mobile__button_left {
+        position: absolute;
+        left: 15px;
+        top: 50%;
+      }
 
-			.mobile__button_right {
-				position: absolute;
-				right: 15px;
-				top: 50%;
-			}
+      .mobile__button_right {
+        position: absolute;
+        right: 15px;
+        top: 50%;
+      }
 
-			.mobile__button_right,
-			.mobile__button_left {
-				display: flex;
-				align-items: center;
-				justify-content: center;
-				width: 32px;
-				height: 32px;
-				background: #95a4aa;
-				color: #000;
-				border-radius: 6px;
-				padding: 4px;
-				border: none;
-				cursor: pointer;
-				transition: 0.3s ease-in-out;
+      .mobile__button_right,
+      .mobile__button_left {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 32px;
+        height: 32px;
+        background: #95a4aa;
+        color: #000;
+        border-radius: 6px;
+        padding: 4px;
+        border: none;
+        cursor: pointer;
+        transition: 0.3s ease-in-out;
 
-				&:hover {
-					background: #bb0a0a;
-					color: #fff;
-				}
-			}
-		}
-	}
+        &:hover {
+          background: #bb0a0a;
+          color: #fff;
+        }
+      }
+    }
+  }
 
-	.mobile__count {
-		display: none;
-		justify-content: center;
-		align-items: center;
-		margin-top: 16px;
+  .mobile__count {
+    display: none;
+    justify-content: center;
+    align-items: center;
+    margin-top: 16px;
 
-		> button {
-			width: 12px;
-			height: 12px;
-			border: none;
-			border-radius: 50%;
-			background: #fff;
-			transition: 0.3s ease-in-out;
+    > button {
+      width: 12px;
+      height: 12px;
+      border: none;
+      border-radius: 50%;
+      background: #fff;
+      transition: 0.3s ease-in-out;
 
-			&.active {
-				width: 32px;
-				background: #ea0c0c;
-				border-radius: 50px;
-			}
+      &.active {
+        width: 32px;
+        background: #ea0c0c;
+        border-radius: 50px;
+      }
 
-			&:not(:first-child) {
-				margin-left: 8px;
-			}
-		}
-	}
+      &:not(:first-child) {
+        margin-left: 8px;
+      }
+    }
+  }
 
-	@media (max-width: 700px) {
-		.mobile__count {
-			display: flex;
-		}
+  @media (max-width: 700px) {
+    .mobile__count {
+      display: flex;
+    }
 
-		.header {
-			.slider__button {
-				display: none;
-			}
+    .header {
+      .slider__button {
+        display: none;
+      }
 
-			> button {
-				display: none;
-			}
-		}
+      > button {
+        display: none;
+      }
+    }
 
-		.slider {
-			.mobile__slider_button {
-				display: block;
-			}
-		}
-	}
+    .slider {
+      .mobile__slider_button {
+        display: block;
+      }
+    }
+  }
 }
