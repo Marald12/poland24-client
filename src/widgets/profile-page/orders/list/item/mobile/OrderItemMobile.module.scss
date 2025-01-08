@@ -1,6 +1,28 @@
 .wrapper {
 	overflow: hidden;
 
+	.summa__header {
+		display: flex;
+		align-items: center;
+		margin-top: 4px;
+
+		> span {
+			font-family: Rubik, sans-serif;
+			font-weight: 400;
+			font-size: 14px;
+			line-height: 16.8px;
+			opacity: 0.6;
+		}
+
+		> h4 {
+			font-family: Rubik, sans-serif;
+			font-weight: 600;
+			font-size: 14px;
+			line-height: 14px;
+			margin-left: 4px;
+		}
+	}
+
 	.item {
 		background: #fff;
 		padding: 18px 16px;
@@ -18,7 +40,7 @@
 		}
 
 		.status {
-			padding-left: 12px;
+			padding-left: 4px;
 
 			> span {
 				font-family: Rubik, sans-serif;
@@ -31,8 +53,8 @@
 			> h4 {
 				font-family: Rubik, sans-serif;
 				font-weight: 700;
-				font-size: 16px;
-				line-height: 19.2px;
+				font-size: 14px;
+				line-height: 19.6px;
 			}
 
 			&.warning {
@@ -62,10 +84,9 @@
 
 			> h4 {
 				font-family: Rubik, sans-serif;
-				font-weight: 400;
+				font-weight: 600;
 				font-size: 14px;
-				line-height: 16.8px;
-				opacity: 0.9;
+				line-height: 14px;
 			}
 		}
 
@@ -94,14 +115,6 @@
 				}
 			}
 
-			> button {
-				width: 100px;
-				height: 42px;
-				padding: 8px 16px;
-				font-size: 14px;
-				line-height: 16px;
-			}
-
 			> svg {
 				cursor: pointer;
 			}
@@ -125,6 +138,10 @@
 		transform: scale(0);
 		margin-left: 16px;
 		margin-bottom: 16px;
+
+		@media (max-width: 746px) {
+			flex-direction: column;
+		}
 
 		.side__info {
 			flex: 25%;
@@ -231,6 +248,15 @@
 				line-height: 19.2px;
 				border-bottom: 1px solid #000;
 				padding-bottom: 4px;
+			}
+
+			> button {
+				width: 100px;
+				height: 42px;
+				padding: 8px 16px;
+				font-size: 14px;
+				line-height: 16px;
+				margin-top: 24px;
 			}
 
 			.table__header {

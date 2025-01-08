@@ -1,0 +1,72 @@
+.item {
+	background: #fff;
+	box-shadow: 0 24px 33px -9px #0000001a;
+	border-radius: 10px;
+	padding: 24px;
+	height: auto;
+
+	.name {
+		display: flex;
+		align-items: center;
+		flex-wrap: wrap;
+
+		> *:not(:first-child) {
+			margin-left: 8px;
+		}
+
+		> *:nth-child(2) {
+			margin-left: 32px;
+		}
+
+		> h4 {
+			font-family: Rubik, sans-serif;
+			font-weight: 700;
+			font-size: 16px;
+			line-height: 19.2px;
+		}
+
+		> span {
+			font-family: Rubik, sans-serif;
+			font-weight: 400;
+			font-size: 14px;
+			line-height: 16.8px;
+			opacity: 0.9;
+		}
+
+		> b {
+			font-family: 'SF Pro Display', sans-serif;
+			font-weight: 600;
+			line-height: 14px;
+		}
+	}
+
+	.stars {
+		display: flex;
+		margin-top: 10px;
+	}
+
+	> h4 {
+		margin-top: 16px;
+		font-family: Rubik, sans-serif;
+		font-weight: 500;
+		font-size: 16px;
+		line-height: 22.4px;
+		opacity: 0.9;
+	}
+
+	.images {
+		margin-top: 16px;
+		display: flex;
+		flex-wrap: wrap;
+		gap: 8px;
+
+		> img {
+			border-radius: 8px;
+			max-width: none;
+			max-height: none;
+			width: 198px;
+			height: 159px;
+			object-fit: cover;
+		}
+	}
+}

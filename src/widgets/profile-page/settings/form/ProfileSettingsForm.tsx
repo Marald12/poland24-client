@@ -15,7 +15,7 @@ import { IUserDto } from '@/features/redux/api/user/user.interface'
 
 const ProfileSettingsForm: FC = () => {
 	const { data: user } = userApi.useGetProfileQuery(null)
-	const [mutate, { data: finnal, isSuccess }] = userApi.useUpdateUserMutation()
+	const [mutate, { isSuccess }] = userApi.useUpdateUserMutation()
 	const router = useRouter()
 	const { register, handleSubmit, watch, formState } = useForm<ISettingsForm>({
 		defaultValues: {

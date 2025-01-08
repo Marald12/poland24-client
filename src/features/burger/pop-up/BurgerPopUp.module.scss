@@ -14,7 +14,7 @@
 
 	.pop_up__overlay {
 		position: absolute;
-		width: 40%;
+		width: 50%;
 		height: 100%;
 		background: #fff;
 		padding: 15px;
@@ -147,5 +147,80 @@
 
 	.register__link {
 		margin-left: 5px;
+	}
+}
+
+.popUp {
+	width: 100%;
+	background: #fff;
+	box-shadow: 0 16px 16px 0 #0000001a;
+	border-radius: 10px;
+
+	.popUp__header {
+		display: flex;
+		align-items: center;
+		border-bottom: 1px solid #e0e0e0;
+		padding: 10px;
+
+		.popUp__avatar_name {
+			display: flex;
+			flex-direction: column;
+			margin-left: 8px;
+
+			> b {
+				font-family: Rubik, sans-serif;
+				font-weight: 600;
+				font-size: 14px;
+				line-height: 14px;
+			}
+
+			> span {
+				font-family: Rubik, sans-serif;
+				font-weight: 500;
+				font-size: 14px;
+				line-height: 16.8px;
+				color: #6e7191;
+			}
+		}
+	}
+
+	.popUp__content > a {
+		display: flex;
+		align-items: center;
+		padding: 10px;
+		transition: 0.2s ease-in;
+
+		> span {
+			font-family: Rubik, sans-serif;
+			font-weight: 700;
+			font-size: 14px;
+			line-height: 20px;
+			color: #2d2d2d;
+			margin-left: 16px;
+		}
+
+		&:not(:first-child) {
+			margin-top: 8px;
+		}
+
+		&:hover {
+			background: rgba(219, 219, 219, 0.5);
+		}
+	}
+
+	.popUp__footer {
+		padding: 10px;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		cursor: pointer;
+
+		> span {
+			font-family: Rubik, sans-serif;
+			font-weight: 700;
+			font-size: 14px;
+			line-height: 20px;
+			color: #2d2d2d;
+		}
 	}
 }
