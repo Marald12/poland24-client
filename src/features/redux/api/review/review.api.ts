@@ -6,12 +6,19 @@ import {
 
 export const reviewApi = baseApi.injectEndpoints({
 	endpoints: build => ({
-		getAllReviews: build.query<IReview[], string>({
+		getAllReviews: build.query<IReview[], string | undefined>({
 			query: shop => ({
 				url: '/reviews',
 				params: { shop }
 			}),
 			providesTags: ['review']
+		}),
+		getByProfileReviews: build.query<IReview[], null>({
+			query: () => ({
+				url: '/reviews/by-profile',
+				cache: 'no-cache'
+			}),
+			providesTags: ['review', 'user']
 		}),
 		getOneReview: build.query<IReview, string>({
 			query: id => `/reviews/${id}`,
@@ -23,7 +30,7 @@ export const reviewApi = baseApi.injectEndpoints({
 				method: 'POST',
 				body
 			}),
-			invalidatesTags: ['review', 'user']
+			invalidatesTags: ['review']
 		})
 	})
 })

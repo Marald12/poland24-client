@@ -6,15 +6,15 @@ import {
 
 export const requestApi = baseApi.injectEndpoints({
 	endpoints: build => ({
-		getAll: build.query<IRequest[], null>({
+		getAllRequests: build.query<IRequest[], null>({
 			query: () => '/requests',
 			providesTags: ['request']
 		}),
-		getOne: build.query<IRequest, string>({
+		getOneRequest: build.query<IRequest, string>({
 			query: id => `/requests/${id}`,
 			providesTags: (result, error, arg) => [{ type: 'request', id: arg }]
 		}),
-		create: build.mutation<IRequest, IRequestDto>({
+		createRequest: build.mutation<IRequest, IRequestDto>({
 			query: body => ({
 				url: '/requests',
 				method: 'POST',

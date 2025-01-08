@@ -14,7 +14,11 @@ export const baseApi = createApi({
 		}
 	}),
 	reducerPath: 'api',
-	endpoints: build => ({}),
+	endpoints: build => ({
+		test: build.query<string, null>({
+			query: () => ''
+		})
+	}),
 	tagTypes: [
 		'order',
 		'shop',

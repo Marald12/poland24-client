@@ -1,0 +1,90 @@
+.wrapper {
+	margin-left: 24px;
+	width: 30%;
+	max-height: none;
+
+	@media (max-width: 1014px) {
+		width: 100%;
+		margin-left: 0;
+	}
+
+	> h4 {
+		font-family: 'SF Pro Display', sans-serif;
+		font-weight: 700;
+		font-size: 16px;
+		line-height: 19.2px;
+	}
+
+	.form {
+		background: #fff;
+		box-shadow: 0 24px 33px -9px #0000001a;
+		border-radius: 10px;
+		padding: 24px;
+		height: 100%;
+		margin-top: 8px;
+		display: flex;
+		align-items: center;
+		flex-direction: column;
+
+		> *:not(:first-child) {
+			margin-top: 8px;
+		}
+
+		.select {
+			width: 100%;
+		}
+
+		.textarea {
+			width: 100%;
+
+			> textarea {
+				padding: 12px;
+				max-height: 96px;
+			}
+		}
+
+		.stars {
+			display: flex;
+			align-items: center;
+			flex-wrap: wrap;
+
+			> span {
+				font-family: Rubik, sans-serif;
+				font-weight: 400;
+				font-size: 16px;
+				line-height: 24px;
+				opacity: 0.6;
+				display: flex;
+				white-space: nowrap;
+
+				> span {
+					color: #ed2e2e;
+				}
+			}
+
+			.stars__container {
+				display: flex;
+				margin-left: 16px;
+
+				@media (max-width: 1202px) {
+					margin-left: 0;
+				}
+
+				> span {
+					cursor: pointer;
+				}
+
+				.star {
+					max-width: none;
+					max-height: none;
+				}
+			}
+		}
+
+		> button {
+			width: 100%;
+			font-size: 14px;
+			line-height: 20px;
+		}
+	}
+}

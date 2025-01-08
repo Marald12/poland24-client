@@ -1,4 +1,50 @@
 .list {
 	margin-top: 16px;
 	min-width: 100%;
+
+	.items {
+		@media (max-width: 1000px) {
+			display: none;
+		}
+
+		&__mobile {
+			display: none;
+
+			@media (max-width: 1000px) {
+				display: block;
+			}
+		}
+	}
+
+	.pagination {
+		display: flex;
+		justify-content: center;
+		margin-top: 38px;
+
+		> span {
+			cursor: pointer;
+			font-family: 'SF Pro Display', sans-serif;
+			font-weight: 500;
+			font-size: 14px;
+			line-height: 16.8px;
+
+			&.pagination__count {
+				font-family: 'SF Pro Display', sans-serif;
+				font-weight: 700;
+				font-size: 16px;
+				line-height: 19.2px;
+				opacity: 0.6;
+
+				&.active {
+					opacity: 1;
+					border-bottom: 3px solid #95a4aa;
+					padding-bottom: 6px;
+				}
+			}
+
+			&:not(:first-child) {
+				margin-left: 16px;
+			}
+		}
+	}
 }

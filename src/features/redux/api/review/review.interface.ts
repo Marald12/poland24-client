@@ -13,6 +13,6 @@ export interface IReview extends IBase {
 export interface IReviewDto {
 	message: string
 	starCount: number
-	media: string[]
+	media?: string[]
 	shopId: string
 }

@@ -1,7 +1,8 @@
-type ObjectType = Record<string, any>
-
-export const getDifferingFields = (obj1: ObjectType, obj2: ObjectType) => {
-	const differingFields: ObjectType = {}
+export const getDifferingFields = <T extends Record<string, unknown>>(
+	obj1: T,
+	obj2: T
+): Partial<T> => {
+	const differingFields: Partial<T> = {}
 
 	for (const key in obj1) {
 		if (obj1[key] !== obj2[key]) {
@@ -15,9 +16,9 @@ export const getDifferingFields = (obj1: ObjectType, obj2: ObjectType) => {
 		}
 	}
 
-	delete differingFields.password
-	delete differingFields.repeatPassword
-	delete differingFields.isPolicy
+	delete differingFields['password']
+	delete differingFields['repeatPassword']
+	delete differingFields['isPolicy']
 
 	return differingFields
 }

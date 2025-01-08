@@ -1,0 +1,14 @@
+.wrapper {
+	padding: 0 15px;
+
+	> div:nth-child(1) {
+		margin: 16px 0;
+	}
+
+	.list {
+		display: flex;
+		flex-direction: column;
+		gap: 24px;
+		margin-top: 32px;
+	}
+}

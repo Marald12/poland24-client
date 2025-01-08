@@ -7,13 +7,21 @@ import {
 
 export const orderApi = baseApi.injectEndpoints({
 	endpoints: build => ({
-		getAll: build.query<IOrder, null>({
+		getAll: build.query<IOrder[], null>({
 			query: () => '/orders',
 			providesTags: ['order']
 		}),
 		getOne: build.query<IOrder, string>({
 			query: id => `/orders/${id}`,
 			providesTags: (result, error, arg) => [{ type: 'order', id: arg }]
+		}),
+		getInPagination: build.query<IOrder[], { skip: number; limit: number }>({
+			query: body => ({
+				url: `/orders/pagination`,
+				params: body,
+				cache: 'no-cache'
+			}),
+			providesTags: ['order', 'user']
 		}),
 		createOrderForNoAuth: build.mutation<IOrder, IOrderDto>({
 			query: body => ({
