@@ -2,13 +2,13 @@ import type { NextConfig } from 'next'
 
 const nextConfig: NextConfig = {
 	images: {
-		remotePatterns: [{ protocol: 'http', hostname: 'localhost', port: '3002' }]
+		remotePatterns: [{ protocol: 'https', hostname: 'poland24-server-production.up.railway.app', port: '3000' }]
 	},
 	async rewrites() {
 		return [
 			{
 				source: '/uploads/:path*',
-				destination: 'http://localhost:3002/uploads/:path*'
+				destination: 'https://poland24-server-production.up.railway.app/uploads/:path*'
 			}
 		]
 	}
