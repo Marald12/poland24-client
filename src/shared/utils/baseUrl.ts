@@ -1,1 +1,1 @@
-export const baseUrl = 'http://localhost:3002/api'
+export const baseUrl = 'https://poland24-server-production.up.railway.app/api'
